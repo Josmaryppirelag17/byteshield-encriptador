@@ -1,0 +1,52 @@
+/* Estilos para el encabezado */
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+/* Animación para deslizar el encabezado desde la parte superior */
+.slide-in-top {
+  animation: slide-in-top 0.5s cubic-bezier(.25, .46, .45, .94) both
+}
+
+/* Keyframes para la animación de deslizamiento desde la parte superior */
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+/* Estilos para la imagen del logo en el encabezado */
+.header__logo-img {
+  width: 150px;
+  height: 150px;
+}
+
+/* Transición para aplicar un efecto suave al pasar el cursor sobre la imagen del logo */
+.header__logo-img {
+  transition: transform 0.2s ease;
+}
+
+/* Efecto al pasar el cursor sobre la imagen del logo */
+.header__logo-img:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos para pantallas de hasta 480px de ancho (teléfonos) */
+@media only screen and (max-width: 480px) {
+
+  .header {
+    padding: 1rem;
+  }
+
+}

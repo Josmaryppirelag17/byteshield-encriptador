@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./img/pixilart-drawing.png"
+      type="image/x-icon"
+    />
+
+    <title>ByteShield - Mensaje secreto</title>
+
+    <!-- Hojas de estilo CSS -->
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/base.css" />
+    <link rel="stylesheet" href="./CSS/header.css"/>
+    <link rel="stylesheet" href="./CSS/main.css"/>
+    <link rel="stylesheet" href="./CSS/footer.css"/>
+
+    <!-- JavaScript -->
+    <script src="./JS/App.js"></script>
+
+    <!-- Sweetalert | Librería para mostrar alertas personalizadas -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <!-- Encabezado -->
+    <header class="header slide-in-top">
+      <img
+        class="header__logo-img"
+        src="./img/pixil-frame-0.png"
+        alt="img-heart"
+      />
+      <h1 class="title">ByteShield</h1>
+      <img
+        class="header__logo-img"
+        src="./img/pixil-frame-0.png"
+        alt="img-heart"
+      />
+    </header>
+
+    <!-- Contenido -->
+    <main class="container slide-in-blurred-bottom">
+      <div class="card">
+        <!-- Seccion de encriptado de texto -->
+        <section class="section__encrypt">
+          <!-- Caja de encriptado -->
+          <div class="section__encrypted">
+            <label for="encrypted" class="label title">Encriptar</label>
+            <textarea
+              class="section__encrypt section__encrypt-text"
+              name="encrypt"
+              id="encrypted"
+            ></textarea>
+            <p class="section__encrypt-message jello-horizontal">
+              &#9888; Solo se aceptan minúsculas, sin carácteres especiales.
+            </p>
+          </div>
+
+          <div class="section__encrypt section__encrypt-button">
+            <!-- Boton de encriptacion -->
+            <button onclick="textEncrypt()" type="button" class="button">
+              Encriptar
+            </button>
+          </div>
+        </section>
+
+        <!-- Seccion de desencriptado de texto -->
+        <section class="section__decrypt">
+          <!-- Caja de encriptado -->
+          <div class="section__decrypted">
+            <label for="decrypted" class="label title">Desencriptar</label>
+            <textarea
+              class="section__decrypt-text"
+              name="encrypt"
+              id="decrypted"
+            ></textarea>
+          </div>
+
+          <div class="button__decrypt">
+            <!-- Boton de desencriptacion -->
+            <button
+              onclick="textDecrypted()"
+              type="button"
+              class="button__decrypt button"
+            >
+              Desencriptar
+            </button>
+
+            <!-- Boton de copiar -->
+            <button
+              onclick="copyText()"
+              id="copy"
+              type="button"
+              class="button__decrypt button copy"
+            >
+              Copiar
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer slide-in-blurred-left">
+      <img
+        class="footer__img-princess"
+        src="./img/_a531472a-f4b2-4965-ab08-8171d6d620a0-removebg-preview.png"
+        alt="princess"
+      />
+      <img
+        class="footer__img-treasure"
+        src="./img/footer-treasure.png"
+        alt="footer-treasure"
+      />
+      <p class="footer__text-p text-shadow-pop-br">
+        2024 | Josmary Pirela |
+        <a href="https://linktr.ee/josmarypg">Linktree</a>
+      </p>
+    </footer>
+  </body>
+</html>

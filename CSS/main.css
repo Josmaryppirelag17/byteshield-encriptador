@@ -1,0 +1,172 @@
+/* Estilos para la sección de encriptado */
+.section__encrypt {
+  width: 60%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Estilos para los contenedores de texto encriptado y desencriptado */
+.section__encrypted,
+.section__decrypted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para el área de texto de encriptado */
+.section__encrypt-text {
+  height: 18.4rem;
+  width: 23rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+
+/* Estilos para las etiquetas */
+.label {
+  font-size: 0.9rem;
+}
+
+/* Estilos para el mensaje de advertencia */
+.section__encrypt-message {
+  padding-left: 20%;
+  padding-right: 5%;
+}
+
+/* Efecto al pasar el cursor sobre la sección de encriptado */
+.section__encrypt:hover .jello-horizontal {
+  animation: jello-horizontal .9s both
+}
+
+/* Keyframes para la animación jello-horizontal */
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1)
+  }
+
+  30% {
+    transform: scale3d(1.25, .75, 1)
+  }
+
+  40% {
+    transform: scale3d(.75, 1.25, 1)
+  }
+
+  50% {
+    transform: scale3d(1.15, .85, 1)
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1)
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1)
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1)
+  }
+}
+
+/* Estilos para la sección de botón de desencriptado */
+.section__encrypt-button {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para la sección de desencriptado */
+.section__decrypt {
+  width: 40%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Estilos para el área de texto de desencriptado */
+.section__decrypt-text {
+  width: 14.313rem;
+  height: 20.6rem;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+}
+
+/* Estilos para la etiqueta de desencriptado */
+.section__decrypt-label {
+  font-family: "Tangerine", cursive;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Estilos para el botón de desencriptado */
+.button__decrypt {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.copy {
+  display: none;
+}
+
+/* Estilos para pantallas de hasta 768px de ancho (tabletas y teléfonos) */
+@media only screen and (max-width: 900px) {
+  .container {
+    margin: 0 1.5%;
+    align-items: center;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    margin-top: 1.25rem;
+    border-radius: 0.938rem;
+  }
+
+  .card::after {
+    width: 94%;
+    top: 1%;
+  }
+
+  .section__encrypt,
+  .section__decrypt {
+    margin-top: 2%;
+    width: 90%;
+    height: fit-content;
+  }
+
+  .section__decrypt {
+    margin-top: 1.25rem;
+  }
+
+  .section__encrypt-text,
+  .section__decrypt-text {
+    width: 17rem;
+    height: 16.5rem;
+  }
+
+  .section__encrypt-message {
+    padding: 20px;
+  }
+
+}
+
+/* Estilos adicionales para pantallas de hasta 480px de ancho */
+@media only screen and (max-width: 480px) {
+
+  .section__encrypt-text,
+  .section__decrypt-text {
+    width: 100%;
+    height: 21.8rem;
+  }
+
+}

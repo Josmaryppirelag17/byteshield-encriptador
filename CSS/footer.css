@@ -1,0 +1,138 @@
+/* Estilos para el footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../img/footer-pixel.png);
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Animación para deslizar el footer desde la izquierda de Animista*/
+.slide-in-blurred-left {
+  animation: slide-in-blurred-left .9s cubic-bezier(.23, 1.000, .32, 1.000) both
+}
+
+/* Keyframes para la animación de deslizamiento desde la izquierda */
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1
+  }
+}
+
+/* Estilos para la imagen de la princesa en el footer */
+.footer__img-princess {
+  position: absolute;
+  height: 18.75rem;
+  width: 18.75rem;
+  bottom: 1.25rem;
+  left: 8%;
+  transform: translateX(-50%);
+
+}
+
+/* Estilos para la imagen del tesoro en el footer */
+.footer__img-treasure {
+  position: absolute;
+  height: 5rem;
+  width: 10rem;
+  bottom: 1.25rem;
+  right: 4%;
+  transform: translateX(30%);
+
+}
+
+/* Estilos para el texto del footer */
+.footer__text-p {
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fffff3;
+}
+
+/* Estilos para el enlace del texto del footer cuando se pasa el cursor por encima */
+.footer__text-p a:hover {
+  color: #FF63D8;
+  cursor: pointer;
+}
+
+/* Animación para aplicar un efecto de sombra al texto del footer */
+.text-shadow-pop-br {
+  animation: text-shadow-pop-br .6s both
+}
+
+/* Keyframes para la animación de efecto de sombra */
+@keyframes text-shadow-pop-br {
+  0% {
+    text-shadow: 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555, 0 0 #555;
+    transform: translateX(0) translateY(0)
+  }
+
+  100% {
+    text-shadow: 1px 1px #555, 2px 2px #555, 3px 3px #555, 4px 4px #555, 5px 5px #555, 6px 6px #555, 7px 7px #555, 8px 8px #555;
+    transform: translateX(-8px) translateY(-8px)
+  }
+}
+
+/* Estilos para pantallas de hasta 1100px de ancho */
+@media only screen and (max-width: 1100px) {
+
+  /* Ajuste de tamaño para la imagen de la princesa */
+  .footer__img-princess {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  /* Ajuste de tamaño para la imagen del tesoro */
+  .footer__img-treasure {
+    height: 4rem;
+    width: 9rem;
+  }
+
+}
+
+/* Estilos para pantallas de hasta 768px de ancho (tabletas y teléfonos) */
+@media only screen and (max-width: 900px) {
+
+  /* Ajustes de diseño para el footer */
+  .footer {
+    margin-top: 5rem;
+  }
+
+  /* Oculta las imágenes de la princesa y del tesoro en dispositivos más pequeños */
+  .footer__img-princess,
+  .footer__img-treasure {
+    display: none;
+  }
+
+  /* Ajustes de diseño para el texto del footer en dispositivos más pequeños */
+  .footer__text-p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .footer__img-treasure,
+  .footer__img-princess {
+    display: none;
+  }
+
+}
